@@ -189,7 +189,8 @@ void VMPI_ExceptionFilter( unsigned long code )
 	};
 
 	int nErrors = sizeof( errors ) / sizeof( errors[0] );
-	for ( int i=0; i < nErrors; i++ )
+	int i = 0;
+	for ( ; i < nErrors; i++ )
 	{
 		if ( errors[i].code == code )
 			VMPI_HandleCrash( errors[i].pReason, true );

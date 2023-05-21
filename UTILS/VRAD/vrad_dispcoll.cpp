@@ -213,7 +213,7 @@ void CVRADDispColl::BuildVNodes( void )
 		
 		// Get the surface area of the triangles in the node.
 		pVNode->patchArea = 0.0f;
-		for ( iTri = 0; iTri < 2; ++iTri )
+		for ( int iTri = 0; iTri < 2; ++iTri )
 		{
 			Vector vecEdges[2], vecCross;			
 			VectorSubtract( vecTriVerts[iTri][1], vecTriVerts[iTri][0], vecEdges[0] );
@@ -256,7 +256,7 @@ void CVRADDispColl::BuildVNodes( void )
 				
 		// Get the averaged patch normal.
 		pVNode->patchNormal.Init();
-		for( iVert = 0; iVert < 3; ++iVert )
+		for( int iVert = 0; iVert < 3; ++iVert )
 		{
 			VectorAdd( pVNode->patchNormal, vecTriVertNormals[0][iVert], pVNode->patchNormal );
 			

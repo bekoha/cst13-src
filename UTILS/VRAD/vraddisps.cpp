@@ -439,7 +439,7 @@ void CVRadDispMgr::UnserializeDisps( void )
 	}
 
 	// Set them up as CDispUtilsHelpers.
-	for ( iDisp = 0; iDisp < g_dispinfo.Count(); ++iDisp )
+	for ( int iDisp = 0; iDisp < g_dispinfo.Count(); ++iDisp )
 	{
 		builderDisps[iDisp]->SetDispUtilsHelperInfo( builderDisps.Base(), g_dispinfo.Count() );
 	}
@@ -457,7 +457,7 @@ void CVRadDispMgr::UnserializeDisps( void )
 	}
 
 	// generate the displacement surfaces
-	for( iDisp = 0; iDisp < g_dispinfo.Count(); ++iDisp )
+	for( int iDisp = 0; iDisp < g_dispinfo.Count(); ++iDisp )
 	{
 		builderDisps[iDisp]->Create();
 	}
@@ -474,7 +474,7 @@ void CVRadDispMgr::UnserializeDisps( void )
 
 	m_DispTrees.AddMultipleToTail( g_dispinfo.Count() );
 
-	for( iDisp = 0; iDisp < g_dispinfo.Count(); iDisp++ )
+	for( int iDisp = 0; iDisp < g_dispinfo.Count(); iDisp++ )
 	{
 		pDispTrees[iDisp].Create( builderDisps[iDisp] );
 

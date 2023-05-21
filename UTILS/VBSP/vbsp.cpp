@@ -763,7 +763,7 @@ void MarkNoDynamicShadowSides()
 		int brushSideID = g_NoDynamicShadowSides[i];
 	
 		// Find the side with this ID.
-		for ( iSide=0; iSide < nummapbrushsides; iSide++ )
+		for ( int iSide=0; iSide < nummapbrushsides; iSide++ )
 		{
 			if ( brushsides[iSide].id == brushSideID )
 				brushsides[iSide].m_bDynamicShadowsEnabled = false;

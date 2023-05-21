@@ -211,9 +211,9 @@ void ClusterMerge (int clusternum)
 	// convert portal bits to leaf bits
 	numvis = LeafVectorFromPortalVector (portalvector, uncompressed);
 
-	if ( CheckBit( uncompressed, clusternum ) )
-		Warning("WARNING: Cluster portals saw into cluster at (%d %d %d)\n"
-		"Use the View->Go To Coordinates Tool in Hammer to find the Location\n"CST_ERROR_SITE"\n");
+	if ( CheckBit( uncompressed, clusternum ) ) Warning("WARNING: Cluster portals saw into cluster\n");
+		//Warning("WARNING: Cluster portals saw into cluster at (%d %d %d)\n"
+		//"Use the View->Go To Coordinates Tool in Hammer to find the Location\n"CST_ERROR_SITE"\n");
 				
 	SetBit( uncompressed, clusternum );
 	numvis++;		// count the leaf itself

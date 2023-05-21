@@ -1355,7 +1355,7 @@ void BuildVisForLightEnvironment( void )
 	unsigned char *pLeafBits = (unsigned char *)stackalloc( nLeafBytes * sizeof(unsigned char) );
 	memset( pLeafBits, 0, nLeafBytes );
 
-	for ( iLeaf = 0; iLeaf < numleafs; ++iLeaf )
+	for ( int iLeaf = 0; iLeaf < numleafs; ++iLeaf )
 	{
 		// If this leaf has light in it, then don't bother
 		if ( dleafs[iLeaf].flags & LEAF_FLAGS_SKY )
@@ -1388,7 +1388,7 @@ void BuildVisForLightEnvironment( void )
 
 	// Must set the bits in a separate pass so as to not flood-fill LEAF_FLAGS_SKY everywhere
 	// pLeafbits is a bit array of all leaves that need to be marked as seeing sky
-	for ( iLeaf = 0; iLeaf < numleafs; ++iLeaf )
+	for ( int iLeaf = 0; iLeaf < numleafs; ++iLeaf )
 	{
 		if ( dleafs[iLeaf].flags & LEAF_FLAGS_SKY )
 			continue;

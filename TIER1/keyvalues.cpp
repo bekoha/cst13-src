@@ -796,8 +796,8 @@ KeyValues *KeyValues::FindKey(const char *keyName, bool bCreate)
 
 	// look for '/' characters deliminating sub fields
 	char szBuf[256];
-	char *subStr = strchr(keyName, '/');
-	const char *searchStr = keyName;
+	const char* subStr = strchr(keyName, '/');
+	const char* searchStr = keyName;
 
 	// pull out the substring if it exists
 	if (subStr)
