@@ -51,7 +51,7 @@ struct StaticPropBuild_t
 	float	m_FadeMaxDist;
 	bool	m_FadesOut;
 	float	m_flForcedFadeScale;
-	char	m_pTargetName[128];//ts2do
+//	char	m_pTargetName[128];//ts2do
 };
  
 
@@ -526,7 +526,7 @@ static void AddStaticPropToLump( StaticPropBuild_t const& build )
 			propLump.m_Flags |= STATIC_PROP_USE_LIGHTING_ORIGIN;
 		}
 	}
-	strcpy(propLump.m_pTargetName,build.m_pTargetName);//ts2do
+//	strcpy(propLump.m_pTargetName,build.m_pTargetName);//ts2do
 
 	// Add the leaves to the leaf lump
 	for (int j = 0; j < leafList.Size(); ++j)
@@ -604,7 +604,7 @@ void EmitStaticProps()
 			GetVectorForKey( &entities[i], "origin", build.m_Origin );
 			GetAnglesForKey( &entities[i], "angles", build.m_Angles );
 			build.m_pModelName = ValueForKey( &entities[i], "model" );
-			 strcpy(build.m_pTargetName, ValueForKey( &entities[i], "targetname" )); //ts2do
+//			 strcpy(build.m_pTargetName, ValueForKey( &entities[i], "targetname" )); //ts2do
 			build.m_Solid = IntForKey( &entities[i], "solid" );
 			build.m_Skin = IntForKey( &entities[i], "skin" );
 			build.m_FadeMaxDist = FloatForKey( &entities[i], "fademaxdist" );

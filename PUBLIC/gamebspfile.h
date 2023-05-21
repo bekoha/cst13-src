@@ -161,7 +161,7 @@ struct StaticPropLump_t
 	float		m_FadeMaxDist;
 	Vector		m_LightingOrigin;
 	float		m_flForcedFadeScale;
-	char		m_pTargetName[128];//ts2do
+//	char		m_pTargetName[128];//ts2do
 //	int			m_Lighting;			// index into the GAMELUMP_STATIC_PROP_LIGHTING lump
 };
 
